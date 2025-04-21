@@ -1,19 +1,17 @@
 /** Fonts */
-// @font-face {
-//     font-family: "BelleFair";
-//     src: url("assets/fonts/Bellefair-Regular.woff2") format("woff2"),
-//       url("assets/fonts/Bellefair-Regular.woff") format("woff");
-//     font-weight: 400;
-//     font-style: normal;
-//   }
+.special-gothic-expanded-one-regular {
+  font-family: "Special Gothic Expanded One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
   
-//   @font-face {
-//     font-family: "Poppins";
-//     src: url("assets/fonts/Poppins-SemiBold.woff2") format("woff2"),
-//       url("assets/fonts/Poppins-SemiBold.woff") format("woff");
-//     font-weight: 600;
-//     font-style: normal;
-//   }
+.sriracha-regular {
+  font-family: "Sriracha", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
   
 //   // @font-face {
 //   //   font-family: "Poppins";
@@ -31,8 +29,8 @@
 //     font-style: normal;
 //   }
   
-  $font-family: "Special Gothic Expanded One", sans-serif;
-  $header-family: "Sriracha", serif;
+  $font-family: "Sriracha", cursive;
+  $header-family: "Special Gothic Expanded One", sans-serif;
   
   body {
     font-family: $font-family;

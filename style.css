@@ -206,8 +206,20 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 /** Global colours */
 /** Fonts */
-body {
+.special-gothic-expanded-one-regular {
   font-family: "Special Gothic Expanded One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.sriracha-regular {
+  font-family: "Sriracha", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  font-family: "Sriracha", cursive;
 }
 
 /** Variables */
@@ -220,6 +232,42 @@ body {
 
 .hidden {
   display: none;
+}
+
+/** Structure styling */
+body {
+  background: #0A04FB;
+  color: #ffffff;
+}
+
+.max-wrapper {
+  padding: 0 5%;
+}
+
+/** Components aggregator */
+/** Header styles */
+.header__logo img {
+  max-width: 100%;
+}
+
+.countdown {
+  display: flex;
+  padding: 0 3%;
+  justify-content: space-between;
+  font-size: 2rem;
+  font-family: "Special Gothic Expanded One", sans-serif;
+  text-align: center;
+  margin-bottom: 1.25rem;
+  margin-top: 1.25rem;
+}
+.countdown > div {
+  background-color: #ffffff;
+  color: #E1341E;
+}
+.countdown > div span {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  display: block;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,30 @@
+/** Header styles */
+
+
+
+.header {
+    &__logo img {
+        max-width: 100%;
+    }
+}
+
+
+.countdown {
+    display: flex;
+    padding: 0 3%;
+    justify-content: space-between;
+    font-size: 2rem;
+    font-family: $header-family;
+    text-align: center;
+    margin-bottom: 1.25rem;
+    margin-top: 1.25rem;
+    & > div {
+        background-color: $White;
+        color: $Secondary;
+        & span {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            display: block;
+        }
+    }
+}
