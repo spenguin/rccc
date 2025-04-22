@@ -23,3 +23,26 @@ define( 'CORE_DIST', CORE_URL . '/js/dist/' );
 define( 'CORE_JS', CORE_URL . '/js/' );
 
 require_once CORE_INC . 'blank-slate.php';
+require_once CORE_INC . 'shortcodes.php';
+
+
+
+ /**
+ * Enqueue scripts and styles.
+ */
+// add_action( 'wp_enqueue_scripts', '\Core\upvancouver_enqueue_styles' );
+add_action( 'wp_enqueue_scripts', '\Core\upvancouver_enqueue_scripts' );
+
+function upvancouver_enqueue_styles() 
+{	
+	// wp_enqueue_style( 'parent-style', get_template_directory_uri().'/style.css' );
+    wp_enqueue_style( 'upvanvcouver-style', get_stylesheet_uri(), array(), _S_VERSION ); 
+} 
+
+function upvancouver_enqueue_scripts()
+{
+	wp_enqueue_script( 'countdown', CORE_JS . 'countdown.js', ['jquery'], '1.0.0', [] );
+}
+
+// Removing front end admin bar because it's ugly
+add_filter('show_admin_bar', '__return_false');

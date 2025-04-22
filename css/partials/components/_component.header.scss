@@ -3,8 +3,13 @@
 
 
 .header {
-    &__logo img {
-        max-width: 100%;
+    &__logo {
+        display: flex;
+        justify-content: center;
+        background-color: $DarkBlueGrey;
+            img {
+            max-width: 100%;
+        }
     }
 }
 
@@ -21,6 +26,7 @@
     & > div {
         background-color: $White;
         color: $Secondary;
+        border: 1px solid $Black;
         & span {
             font-size: 0.85rem;
             text-transform: uppercase;

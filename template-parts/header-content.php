@@ -4,20 +4,20 @@
  */
 ?>
     <?php if( is_home() || is_front_page() ): ?>
-        <div class="header-bar">
+        <div class="header-bar max-wrapper__narrow">
             <?php // countdown ?>
             <div class="countdown">
-                <div class="countdown__days">
-                    23<span>days</span>
+                <div id="days" class="countdown__days">
+                    <span class="count__days"></span><span class="units">days</span>
                 </div>
-                <div class="countdown__hours">
-                    17<span>hours</span>
+                <div id="hours" class="countdown__hours">
+                <span class="count">99</span><span class="units">hours</span>
                 </div> 
-                <div class="countdown__minutes">
-                    45<span>minutes</span>
+                <div id="minutes" class="countdown__minutes">
+                <span class="count">99</span><span class="units">minutes</span>
                 </div>
-                <div class="countdown__seconds">
-                    30<span>seconds</span>
+                <div id="seconds" class="countdown__seconds">
+                <span class="count">99</span><span class="units">seconds</span>
                 </div>                                                           
             </div>
         </div>

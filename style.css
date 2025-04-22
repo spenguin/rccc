@@ -234,18 +234,49 @@ body {
   display: none;
 }
 
+/** 	Mixins */
+/**
+Function to wrap appropriate media query around content
+param: screen size, either tablet or desktop 
+Requires breakpoints to be set or imported
+*/
 /** Structure styling */
 body {
-  background: #0A04FB;
-  color: #ffffff;
+  background: #ffffff;
 }
 
 .max-wrapper {
   padding: 0 5%;
 }
 
+/** Wrappers styles */
+.max-wrapper {
+  padding: 0 5%;
+}
+@media screen and (min-width: 768px) {
+  .max-wrapper {
+    padding: 0 15%;
+  }
+}
+.max-wrapper__narrow {
+  max-width: 729px;
+  margin: 0 auto;
+}
+
+.cta--wrapper {
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
 /** Components aggregator */
 /** Header styles */
+.header__logo {
+  display: flex;
+  justify-content: center;
+  background-color: #88b;
+}
 .header__logo img {
   max-width: 100%;
 }
@@ -263,11 +294,26 @@ body {
 .countdown > div {
   background-color: #ffffff;
   color: #E1341E;
+  border: 1px solid #000000;
 }
 .countdown > div span {
   font-size: 0.85rem;
   text-transform: uppercase;
   display: block;
+}
+
+/** Entry styles */
+.home .entry-content {
+  text-align: center;
+}
+.home .entry-content p {
+  line-height: 2rem;
+}
+
+/** Footer styles */
+footer {
+  background-color: #88b;
+  padding: 1.5rem 5%;
 }
 
 /*# sourceMappingURL=style.css.map */
