@@ -1,0 +1,9 @@
+/** Anchor styles */
+
+a {
+    text-decoration: none;
+    color: $RCDarkBlue;
+    &:hover {
+        color: $RCRed;
+    };
+}

@@ -1,2 +1,5 @@
 cd "J:\Weirdspace\Clients\R\Rain City Comic Con\projects\website\rebuild\wp-content\themes\rccc"
 sass --watch css/main.scss:style.css
+
+
+Red: 89332 blue: 6086CA yellow: FFB42C

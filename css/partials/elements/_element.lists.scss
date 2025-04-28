@@ -1,0 +1,21 @@
+/** List styles */
+
+ul {
+    --icon-space: 1.3em;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 0.85rem;
+  }
+
+li {
+    padding-left: var(--icon-space);
+    margin-bottom: 0.25rem;
+  }
+
+li:before {
+    content: "\f73d"; /* FontAwesome Unicode */
+    font-family: FontAwesome;
+    display: inline-block;
+    margin-left: calc( var(--icon-space) * -1 );
+    width: var(--icon-space);
+  }

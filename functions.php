@@ -31,7 +31,7 @@ require_once CORE_INC . 'shortcodes.php';
  * Enqueue scripts and styles.
  */
 // add_action( 'wp_enqueue_scripts', '\Core\upvancouver_enqueue_styles' );
-add_action( 'wp_enqueue_scripts', '\Core\upvancouver_enqueue_scripts' );
+add_action( 'wp_enqueue_scripts', '\Core\rccc_enqueue_scripts' );
 
 function upvancouver_enqueue_styles() 
 {	
@@ -39,9 +39,10 @@ function upvancouver_enqueue_styles()
     wp_enqueue_style( 'upvanvcouver-style', get_stylesheet_uri(), array(), _S_VERSION ); 
 } 
 
-function upvancouver_enqueue_scripts()
+function rccc_enqueue_scripts()
 {
 	wp_enqueue_script( 'countdown', CORE_JS . 'countdown.js', ['jquery'], '1.0.0', [] );
+	wp_enqueue_script( 'nav-show-hide', CORE_JS . 'navshowhide.js', ['jquery'], '1.0.0', [] );
 }
 
 // Removing front end admin bar because it's ugly

@@ -1,5 +1,12 @@
 /** Footer styles */
 footer {
-    background-color: $DarkBlueGrey;
+    background-color: $RCDarkBlue;
     padding: 1.5rem 5%;
+    color: $RCYellow;
+    .social-media {
+        a {
+            font-size: 1rem;
+            color: $RCYellow;
+        }
+    }
 }

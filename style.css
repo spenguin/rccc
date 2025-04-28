@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 Theme Name: Rain City Comicon
 description: Rain City Comicon theme  
@@ -275,7 +276,7 @@ body {
 .header__logo {
   display: flex;
   justify-content: center;
-  background-color: #88b;
+  background-color: #0A121F;
 }
 .header__logo img {
   max-width: 100%;
@@ -293,7 +294,7 @@ body {
 }
 .countdown > div {
   background-color: #ffffff;
-  color: #E1341E;
+  color: #89332a;
   border: 1px solid #000000;
 }
 .countdown > div span {
@@ -312,8 +313,130 @@ body {
 
 /** Footer styles */
 footer {
-  background-color: #88b;
+  background-color: #0A121F;
   padding: 1.5rem 5%;
+  color: #FFB42C;
+}
+footer .social-media a {
+  font-size: 1rem;
+  color: #FFB42C;
+}
+
+/** Navigation style */
+.navigation {
+  background-color: #291B00;
+  color: #FFEBC2;
+  text-align: center;
+  padding-top: 0.85rem;
+  padding-bottom: 0.85rem;
+}
+.navigation h3 {
+  cursor: pointer;
+}
+.navigation--list {
+  display: flex;
+  flex-direction: column;
+}
+.navigation--list a {
+  padding: 0.85rem 0;
+  color: #FFEBC2;
+}
+.navigation--list a:hover {
+  color: #D1DDF0;
+}
+
+/** Elements aggregator */
+/** Heading styles */
+h1, h2, h3, h4 {
+  font-family: "Special Gothic Expanded One", sans-serif;
+}
+
+h1 {
+  display: block;
+  font-size: 2em;
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+
+h2 {
+  display: block;
+  font-size: 1.5em;
+  margin-top: 0.83em;
+  margin-bottom: 0.83em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+
+h3 {
+  display: block;
+  font-size: 1.17em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+
+h4 {
+  display: block;
+  font-size: 1em;
+  margin-top: 1.33em;
+  margin-bottom: 1.33em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+
+/** Anchor styles */
+a {
+  text-decoration: none;
+  color: #0A121F;
+}
+a:hover {
+  color: #89332a;
+}
+
+/** Article styles */
+.entry-title {
+  padding: 0.5rem 5%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.entry-content {
+  padding: 0.5rem 5%;
+  line-height: 1.5rem;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.entry-content p {
+  margin-bottom: 0.85rem;
+}
+
+/** List styles */
+ul {
+  --icon-space: 1.3em;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 0.85rem;
+}
+
+li {
+  padding-left: var(--icon-space);
+  margin-bottom: 0.25rem;
+}
+
+li:before {
+  content: "";
+  /* FontAwesome Unicode */
+  font-family: FontAwesome;
+  display: inline-block;
+  margin-left: calc( var(--icon-space) * -1 );
+  width: var(--icon-space);
 }
 
 /*# sourceMappingURL=style.css.map */

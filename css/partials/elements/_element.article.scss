@@ -1,0 +1,17 @@
+/** Article styles */
+
+.entry-title {
+    padding: 0.5rem 5%;
+    max-width: $maxWidth;
+    margin: 0 auto;
+}
+
+.entry-content {
+    padding: 0.5rem 5%;
+    line-height: 1.5rem;
+    max-width: $maxWidth;
+    margin: 0 auto;
+    p {
+        margin-bottom: 0.85rem;
+    }
+}
