@@ -1,0 +1,24 @@
+/** Organisers list styling */
+.organiser {
+    @include screen-greater-than(tablet) {
+        display: flex;
+    }
+    &--logo {
+        @include screen-greater-than(tablet) {
+            width: 200px;
+            margin-right: 2rem;
+        }
+        & img {
+            width: 100%;
+        }
+    }
+    &--even {
+        background-color: $RCLightBlue;
+        margin-left: -5%;
+        margin-right: -5%;
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-top: 1.75rem;
+    }    
+}
+

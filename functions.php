@@ -23,7 +23,9 @@ define( 'CORE_DIST', CORE_URL . '/js/dist/' );
 define( 'CORE_JS', CORE_URL . '/js/' );
 
 require_once CORE_INC . 'blank-slate.php';
+require_once CORE_INC . 'custom-posts.php';
 require_once CORE_INC . 'shortcodes.php';
+
 
 
 

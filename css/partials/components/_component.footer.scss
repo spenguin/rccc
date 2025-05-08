@@ -1,12 +1,26 @@
 /** Footer styles */
-footer {
+.footer {
     background-color: $RCDarkBlue;
     padding: 1.5rem 5%;
     color: $RCYellow;
+    &--wrapper {
+        @include screen-greater-than(tablet) {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    #copyright {
+        margin-bottom: 2rem;
+    }
     .social-media {
         a {
             font-size: 1rem;
             color: $RCYellow;
+            padding-left: 0.25rem;
+            padding-right: 0.25rem;
+            &:hover {
+                color: $RCLightBlue;
+            }
         }
     }
 }

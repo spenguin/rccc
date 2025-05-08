@@ -312,14 +312,28 @@ body {
 }
 
 /** Footer styles */
-footer {
+.footer {
   background-color: #0A121F;
   padding: 1.5rem 5%;
   color: #FFB42C;
 }
-footer .social-media a {
+@media screen and (min-width: 768px) {
+  .footer--wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.footer #copyright {
+  margin-bottom: 2rem;
+}
+.footer .social-media a {
   font-size: 1rem;
   color: #FFB42C;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+.footer .social-media a:hover {
+  color: #D1DDF0;
 }
 
 /** Navigation style */
@@ -333,9 +347,30 @@ footer .social-media a {
 .navigation h3 {
   cursor: pointer;
 }
+@media screen and (min-width: 768px) {
+  .navigation h3 {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .navigation--wrapper {
+    display: inherit;
+  }
+}
 .navigation--list {
   display: flex;
   flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .navigation--list {
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    max-width: 1280px;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
 }
 .navigation--list a {
   padding: 0.85rem 0;
@@ -343,6 +378,37 @@ footer .social-media a {
 }
 .navigation--list a:hover {
   color: #D1DDF0;
+}
+
+/** Organisers list styling */
+@media screen and (min-width: 768px) {
+  .organiser {
+    display: flex;
+  }
+}
+@media screen and (min-width: 768px) {
+  .organiser--logo {
+    width: 200px;
+    margin-right: 2rem;
+  }
+}
+.organiser--logo img {
+  width: 100%;
+}
+.organiser--even {
+  background-color: #D1DDF0;
+  margin-left: -5%;
+  margin-right: -5%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 1.75rem;
+}
+
+/** Posters on Home Page styles */
+.posters img {
+  width: 100%;
+  height: auto;
+  max-width: 729px;
 }
 
 /** Elements aggregator */

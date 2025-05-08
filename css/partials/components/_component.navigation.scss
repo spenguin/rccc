@@ -8,10 +8,27 @@
     padding-bottom: 0.85rem;
     h3 {
         cursor: pointer;
+        @include screen-greater-than(tablet) {
+            display: none;
+        }
+    }
+    &--wrapper {
+        @include screen-greater-than(tablet){
+            display: inherit;
+        }
     }
     &--list {
         display: flex;
         flex-direction: column;
+        @include screen-greater-than( tablet ) {
+            flex-direction: row;
+            justify-content: space-between;
+            margin: 0 auto;
+            flex-wrap: wrap;
+            max-width: $maxWidth;
+            padding-left: 5%;
+            padding-right: 5%;
+        }
         & a {
             padding: 0.85rem 0;
             color: $RCLightYellow;

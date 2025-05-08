@@ -15,11 +15,11 @@
                     } 
                 ?>
                 <!-- <a href="">About Rain City Comicon</a> -->
-                <a href="">The Organisers</a>
-                <a href="">Panels</a>
+                <a href="/about-the-organizers">About The Organizers</a>
+                <a href="/panels">Panels</a>
                 <a href="/statement-of-purpose">Statement of Purpose</a>
                 <a href="/code-of-conduct">Code of Conduct</a>
-                <a href="">Exhibitors</a>
+                <!-- <a href="">Exhibitors</a> -->
             </div>
         </div>
     </section>
