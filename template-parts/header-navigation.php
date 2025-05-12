@@ -19,7 +19,7 @@
                 <a href="/panels">Panels</a>
                 <a href="/statement-of-purpose">Statement of Purpose</a>
                 <a href="/code-of-conduct">Code of Conduct</a>
-                <!-- <a href="">Exhibitors</a> -->
+                <a href="/exhibitors">Exhibitors</a>
             </div>
         </div>
     </section>

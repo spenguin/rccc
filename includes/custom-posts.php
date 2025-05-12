@@ -18,7 +18,8 @@ function initialize()
     add_action('save_post_exhibitor', '\CustomPosts\save_tiktok_handle');
     add_action('save_post_exhibitor', '\CustomPosts\save_facebook_handle');
     add_action('save_post_exhibitor', '\CustomPosts\save_linktree_url');
-    add_action('save_post_exhibitor', '\CustomPosts\save_website');    
+    add_action('save_post_exhibitor', '\CustomPosts\save_website');   
+    add_action('save_post_panel', '\CustomPosts\save_start_and_end_time'); 
     // add_action('admin_init', '\CustomPosts\admin_init');   
     
     // add_action('save_post_market', '\CustomPosts\save_market_location' );
@@ -125,7 +126,7 @@ function custom_post_type()
 
     );
 
-    // Registering Custom Post Type Blogs
+    // Registering Custom Post Type poster
     register_post_type('poster', $args);   
     
     // Set UI labels for Custom Post Type Exhibitor
@@ -195,6 +196,19 @@ function custom_taxonomy_type()
             'hierarchical'  => TRUE
         )
     );
+    register_taxonomy(
+        'event',
+        'panel',
+        ['labels'       => [
+            'name'          => 'Event',
+            'add_new_item'  => 'Add New Event',
+            'new_item_name' => 'New Event'
+        ],
+        'show_ui'       => TRUE,
+        'show_tagcloud' => FALSE,
+        'hierarchical'  => FALSE
+        ]
+    );
 }
 
 /**
@@ -208,6 +222,7 @@ function admin_init()
     add_meta_box('facebook_handle_meta', 'Facebook handle', '\CustomPosts\facebook_handle', 'exhibitor', 'side');
     add_meta_box('linktree_url_meta', 'Linktree URL', '\CustomPosts\linktree_url', 'exhibitor', 'side');
     add_meta_box('website_meta', 'Website', '\CustomPosts\website', 'exhibitor', 'side');
+    add_meta_box('start_and_end_time_meta', 'Start and End Time', '\CustomPosts\start_and_end_time', 'panel', 'side' );
 }
 
 function twitter_handle()
@@ -334,4 +349,31 @@ function save_website()
     $website = isset( $_POST['website'] ) ? $_POST['website'] : '';
 
     update_post_meta($post->ID, 'website', $website);
+}
+
+
+function start_and_end_time()
+{
+    global $post;
+    $custom         = get_post_custom($post->ID);
+    $start_time     = isset( $custom['start_time'] ) ? $custom['start_time'][0] : ''; 
+    $end_time       = isset( $custom['end_time'] ) ? $custom['end_time'][0] : '';
+?>
+    <label for="start_time">Start time:</label>
+    <input type="time" name="start_time" value="<?php echo $start_time; ?>" /><br />
+    <label for="end_time">End time:</label>
+    <input type="time" name="end_time" value="<?php echo $end_time; ?>" />    
+<?php
+}
+
+function save_start_and_end_time()
+{
+    global $post;
+    if (empty($post->ID)) return;
+    $custom     = get_post_custom($post->ID);
+    $start_time = isset( $_POST['start_time'] ) ? $_POST['start_time'] : '';
+    $end_time   = isset( $_POST['end_time'] ) ? $_POST['end_time'] : '';    
+
+    update_post_meta($post->ID, 'start_time', $start_time);  
+    update_post_meta($post->ID, 'end_time', $end_time);       
 }

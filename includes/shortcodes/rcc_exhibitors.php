@@ -14,13 +14,12 @@ function rcc_exhibitors( $atts = [], $content = null, $tag = '' )
 
     ob_start();
     if( $query->have_posts()):  ?>
-        <section class="exhibitors">
-            <h1>Exhibitors</h1>
-            <!-- <?php while( $query->have_posts() ): $query->the_post(); ?>
-                <div class="panel">
-                    <?php echo the_content(); ?>
+        <section class="exhibitors  card--list">
+            <?php while( $query->have_posts() ): $query->the_post(); ?>
+                <div class="exhibitor card--list__item">
+                    <h3><?php echo the_title(); ?></h3>
                 </div>
-            <?php endwhile; ?> -->
+            <?php endwhile; ?>
         </section>
     <?php
     endif; wp_reset_postdata();
