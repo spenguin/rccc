@@ -1,0 +1,16 @@
+/** Panels styles */
+.panel {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    line-height: 2rem;
+    padding-bottom: 0.75rem;
+    &:nth-child(2) {
+        background-color: $RCDarkBlue;
+        color: white;
+        margin-left: -5%;
+        margin-right: -5%;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
+

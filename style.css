@@ -437,6 +437,22 @@ body {
   }
 }
 
+/** Panels styles */
+.panel {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  line-height: 2rem;
+  padding-bottom: 0.75rem;
+}
+.panel:nth-child(2) {
+  background-color: #0A121F;
+  color: white;
+  margin-left: -5%;
+  margin-right: -5%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
 /** Elements aggregator */
 /** Heading styles */
 h1, h2, h3, h4 {
