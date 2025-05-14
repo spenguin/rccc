@@ -436,6 +436,25 @@ body {
     height: 250px;
   }
 }
+.card--list__item--social-media {
+  font-size: 2rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 2%;
+}
+.card--list__item--social-media a {
+  width: 22%;
+}
+.card--list__item--social-media img {
+  width: 35px;
+  height: 35px;
+}
+.card--list__item h3 {
+  padding: 0 0.25rem;
+  font-size: 1rem;
+}
 
 /** Panels styles */
 .panel {
